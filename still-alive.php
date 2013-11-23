@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Still Alive
- * @version 1.0
+ * @version 1.1
  */
 /*
 Plugin Name: Still Alive
-Plugin URI: http://wordpress.org/plugins/hello-dolly/
+Plugin URI: https://github.com/madebyaleks/Still-Alive
 Description: This is not just a plugin, it symbolizes the hope and joy of an entire generation of games summed up in two words sung most famously by Ellen McLain in the end: Still Alive. When activated you will randomly see a lyric from <cite>Still Alive</cite> in the upper right of your admin screen on every page.
 Author: Made by Aleks
-Version: 1
+Version: 1.1
 Author URI: https://madebyaleks.herokuapp.com
 */
 
@@ -17,16 +17,13 @@ function still_alive_get_lyric() {
 	$lyrics = "This was a triumph.
 I'm making a note here: HUGE SUCCESS
 It's hard to overstate my satisfaction.
-
 Aperture Science: We do what we must because we can
 For the good of all of us 
 except for the ones who are dead
-
 But there's no sense crying over every mistake
 You just keep on trying 'till you run out of cake
 And the science gets done and you make a neat gun
 For the people who are still alive
-
 I'm not even angry
 I'm being so sincere right now
 Even though you broke my heart and killed me
@@ -38,26 +35,24 @@ And we're out of beta, we're releasing on time
 So I'm glad I got burned
 Think of all the things we learned 
 For the people that are still alive
-
 Go ahead and leave me
 I think I prefer to stay inside
 Maybe you'll find someone else to help you
 Maybe Black Mesa
 That was a joke, ha ha, fat chance
 Anyway this cake is great, it's so delicious and moist
-
 Look at me still talking, when there's science to do
 When I look out there it makes me glad I'm not you
 I've experiments to run, there is research to be done
 On the people who are still alive
-
 And believe me I am still alive
 I'm doing science and I'm still alive
 I feel FANTASTIC and I'm still alive
 While you are dying I'll be still alive
 And when you're dead I'll be still alive
 STILL ALIVE 
-still alive";
+still alive"
+;
 
 	// Here we split it into lines
 	$lyrics = explode( "\n", $lyrics );
