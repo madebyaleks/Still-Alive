@@ -6,10 +6,10 @@
 /*
 Plugin Name: Still Alive
 Plugin URI: https://github.com/madebyaleks/Still-Alive
-Description: This is not just a plugin, it symbolizes the hope and excitement of an entire generation of gamers summed up in two words sung most famously by Ellen McLain in the end: Still Alive. When activated you will randomly see a lyric from <cite>Still Alive</cite> in the upper right of your admin screen on every page. <em>This plugin is based not the wonderful <b>Hello Dolly</b> plugin that’s included in every WordPress install.</em>
+Description: This is not just a plugin, it symbolizes the hope and excitement of an entire generation of gamers summed up in two words sung most famously by Ellen McLain in the bitter end: Still Alive. When activated you will randomly see a lyric from <cite>Still Alive</cite> in the upper right of your admin screen on every page. <em>This plugin is based on the wonderful <b>Hello Dolly</b> plugin that’s included in every WordPress install.</em>
 Author: Made by Aleks
 Version: 1.0.2
-Author URI: https://madebyaleks.herokuapp.com
+Author URI: http://madebyaleks.com
 */
 
 function still_alive_get_lyric() {
