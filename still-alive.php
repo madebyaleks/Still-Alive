@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Still Alive
- * @version 1.0.2
+ * @version 1.0.3
  */
 /*
 Plugin Name: Still Alive
@@ -13,7 +13,6 @@ Author URI: https://madebyaleks.no
 */
 
 function still_alive_get_lyric() {
-	/** These are the lyrics to Still Alive */
 	$lyrics = "This was a triumph.
 I'm making a note here: HUGE SUCCESS
 It's hard to overstate my satisfaction.
@@ -53,26 +52,19 @@ And when you're dead I'll be still alive
 STILL ALIVE 
 still alive"
 ;
-
-	// Here we split it into lines
 	$lyrics = explode( "\n", $lyrics );
 
-	// And then randomly choose a line
 	return wptexturize( $lyrics[ mt_rand( 0, count( $lyrics ) - 1 ) ] );
 }
 
-// This just echoes the chosen line, we'll position it later
 function still_alive() {
 	$chosen = still_alive_get_lyric();
 	echo "<p id='alive'>$chosen</p>";
 }
 
-// Now we set that function up to execute when the admin_notices action is called
 add_action( 'admin_notices', 'still_alive' );
 
-// We need some CSS to position the paragraph
 function alive_css() {
-	// This makes sure that the positioning is also good for right-to-left languages
 	$x = is_rtl() ? 'left' : 'right';
 
 	echo "
