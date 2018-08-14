@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Still Alive
- * @version 1.1.0
+ * @version 1.2.0
  */
 /*
 Plugin Name: Still Alive
@@ -57,10 +57,15 @@ still alive"
 	return wptexturize( $lyrics[ mt_rand( 0, count( $lyrics ) - 1 ) ] );
 }
 
+
+
 function still_alive() {
 	$chosen = still_alive_get_lyric();
-	echo "<p id='alive'>$chosen</p><img id='aliveLogo' src='/wp-content/plugins/Still-Alive-master/Aperture_Science_grey.svg'
-     alt='Aperture Science logo'/>";
+	$radioIcon = plugin_dir_path("aperture-radio.svg");
+	/*echo "<p id='alive'>$chosen</p><img id='aliveLogo' src='/wp-content/plugins/Still-Alive/aperture-radio.svg'
+     alt='85.5 FM'/>"; */
+
+	echo '<p id="alive">' . $chosen . '</p><img id="aliveLogo" src="' . plugins_url( 'aperture-radio.svg', __FILE__ ) . '" alt="85.5 FM/>';
 }
 
 add_action( 'admin_notices', 'still_alive' );
@@ -80,6 +85,7 @@ function alive_css() {
 	
 	#aliveLogo {
 	    padding-$x: 7px;
+	    padding-top: 3px;
 	    height: 15px;
 	    width: 15px;
 	}
